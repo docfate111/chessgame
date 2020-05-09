@@ -55,11 +55,10 @@ function generateMove(player){
   var bestScore=Number.NEGATIVE_INFINITY;
   for(var i=0; i<possMoves.length; i++){
     game.move(possMoves[i]);
-    var m=minimax(player, 2, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY, player);
+    var m=minimax(player, 1, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY, player);
     if(m>=bestScore){
       bestScore=m;
       bestMove=possMoves[i];
-      console.log("oh looks like ive found better move");
     }
     game.undo();
   }
