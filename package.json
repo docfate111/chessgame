@@ -4,8 +4,7 @@
   "description": "chess game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d chessgame"
+    "deploy": "gh-pages -d minimax"
   },
   "repository": {
     "type": "git",
@@ -16,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/docfate111/chessgame/issues"
   },
-  "homepage": "https://github.com/docfate111/chessgame/index.html",
+  "homepage": "https://docfate111.github.io/chessgame/minimax/index.html",
   "dependencies": {
     "gh-pages": "^2.2.0"
   }
