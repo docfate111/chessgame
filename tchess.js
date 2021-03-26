@@ -77,7 +77,8 @@ function minimax(player, depth, alpha, beta, playerMaxingfor){
   var possMoves=game.moves();
   if(player==playerMaxingfor){
       bestScore=Number.NEGATIVE_INFINITY;
-      for(var i=0; i<possMoves.length; i++){
+      for(var i=0; i<Math.min(10,possMoves.length); i++){
+
           game.move(possMoves[i]);
           player=otherPlayer(player);
           var eval=minimax(player, depth-1, alpha, beta, playerMaxingfor);
@@ -91,7 +92,7 @@ function minimax(player, depth, alpha, beta, playerMaxingfor){
   }else{
     //other players turn minimize points that other player gets
     bestScore=Number.POSITIVE_INFINITY;
-    for(var i=0; i<possMoves.length; i++){
+    for(var i=0; i<Math.min(10,possMoves.length); i++){
       game.move(possMoves[i]);
       player=otherPlayer(player);
       var eval=minimax(player, depth-1, alpha, beta, playerMaxingfor);
